@@ -24,7 +24,14 @@
             </div>
 
             <div class="mb-3">
-                <ejs-textbox id="type" name placeholder="Type" ejs-for="@Model.Type" floatLabelType="Always"></ejs-textbox>
+                <div class="form-group">
+                    <div class="e-btn-group">
+                        <input type="radio" id="radioleft" name="Type" value="Expense" checked="@(Model.Type == "Expense")" />
+                        <label class="e-btn" for="radioleft">Left</label>
+                        <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type == "Income")" />
+                        <label class="e-btn" for="radiomiddle">Center</label>
+                    </div>
+                </div>
                 <span asp-validation-for="Type" class="text-danger"></span>
             </div>
 
